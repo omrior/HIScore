@@ -31,7 +31,7 @@ public class FireLaser : MonoBehaviour
             //Create new laser beam
             var laserTransform = Instantiate(laserPrefab) as Transform;
             //Assign position
-            laserTransform.position = laserTransform.position;
+            laserTransform.position = transform.position;
         }
     }
 
