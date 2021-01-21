@@ -46,20 +46,38 @@ public class ZombieMovement : MonoBehaviour
         Vector3 endpoint = currentDir * rayDistance;
         // visably debug the ray
         Debug.DrawLine(transform.position, transform.position + endpoint, Color.green);
-     
+
         // if walls and pacman layer are selected, will return true for either
         if (hit2D.collider != null)
         {
-            print(hit2D.collider.gameObject);
+
             // check if wall ahead
-            if (hit2D.collider.gameObject.CompareTag("wall")) ;
+            if (hit2D.collider.gameObject.name
+                == "maze")
             {
-                print("wall");
+
                 ChangeDirection();
             }
 
+            // check if wall ahead
+            else if (hit2D.collider.gameObject.name
+                == "passornot")
+            {
+
+                int RandomInt = Random.Range(0, 4);
+
+
+                if (RandomInt > 0)
+                {
+                    ChangeDirection();
+                }
+
+
+            }
+
             // check if pacman ahead
-            if (hit2D.collider.gameObject.CompareTag("PacMan"))
+            else if (hit2D.collider.gameObject.name
+                        == "PacMan")
             {
                 // deal damage;
                 print("pacman ahead!");
@@ -71,26 +89,32 @@ public class ZombieMovement : MonoBehaviour
     void ChangeDirection()
     {
         // randomly select between -1 and 1;
+        
         directionIndex += Random.Range(0, 2) * 2 - 1;
-
+        
         // keeps index from exceeding 3
-        int clampedIndex = directionIndex % directions.Length;
+        directionIndex = directionIndex % directions.Length;
 
         // keep index positive
-        if (clampedIndex < 0)
+        if (directionIndex < 0)
         {
-            clampedIndex = directions.Length + clampedIndex;
+            directionIndex = directions.Length + directionIndex;
         }
 
-
+        
         // set the current direction from the directions array
-        currentDir = directions[clampedIndex];
+        currentDir = directions[directionIndex];
+    
     }
+
+    
 
     void FixedUpdate()
     {
+
         // move in current direction
-        rb.AddForce(currentDir * speed);
+        //rb.AddForce(currentDir * speed);
+        transform.Translate(currentDir * Time.deltaTime * speed, Space.World);
     }
 }
 
