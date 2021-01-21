@@ -40,13 +40,13 @@ public class ZombieMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Physics2D.queriesStartInColliders = true;
+        Physics2D.queriesStartInColliders = false;
         // raycast
         RaycastHit2D hit2D = Physics2D.Raycast(transform.position, currentDir, rayDistance, rayLayer);
         Vector3 endpoint = currentDir * rayDistance;
         // visably debug the ray
         Debug.DrawLine(transform.position, transform.position + endpoint, Color.green);
-        print(hit2D.collider);
+        
         // if walls and pacman layer are selected, will return true for either
         if (hit2D.collider != null)
         {
