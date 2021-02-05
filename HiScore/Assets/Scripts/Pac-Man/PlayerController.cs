@@ -3,35 +3,49 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
-    public float speed = 0.4f;
-    Vector2 dest = Vector2.zero;
+    public float MovementSpeed = 0.4f;
 
-    void Start() {
-        dest = transform.position;
+    [Header("Inputs")]
+    public KeyCode MoveLeft;
+    public KeyCode MoveRight;
+    public KeyCode MoveUp;
+    public KeyCode MoveDown;
+
+    Vector2 currentMovementDirection = Vector2.right;
+    Rigidbody2D rb;
+
+    private void Start() {
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void FixedUpdate() {
-        // Move closer to Destination
-        Vector2 p = Vector2.MoveTowards(transform.position, dest, speed);
-        GetComponent<Rigidbody2D>().MovePosition(p);
+        rb.velocity = (currentMovementDirection * MovementSpeed) * Time.deltaTime;
 
-        // Check for Input if not moving
-	    if ((Vector2)transform.position == dest) {
-	        if (Input.GetKey(KeyCode.UpArrow) && valid(Vector2.up))
-	            dest = (Vector2)transform.position + Vector2.up;
-	        if (Input.GetKey(KeyCode.RightArrow) && valid(Vector2.right))
-	            dest = (Vector2)transform.position + Vector2.right;
-	        if (Input.GetKey(KeyCode.DownArrow) && valid(-Vector2.up))
-	            dest = (Vector2)transform.position - Vector2.up;
-	        if (Input.GetKey(KeyCode.LeftArrow) && valid(-Vector2.right))
-	            dest = (Vector2)transform.position - Vector2.right;
-	    }
     }
 
-    bool valid(Vector2 dir) {
-        // Cast Line from 'next to Pac-Man' to 'Pac-Man'
-        Vector2 pos = transform.position;
-        RaycastHit2D hit = Physics2D.Linecast(pos + dir, pos);
-        return true; //(hit.collider == GetComponent<Collider2D>());
+    void Update()
+    {
+        // Get the users input and set the movement direction. 
+        // We check this in update because update runs every frame, 
+        // polling input inside FixedUpdate can cause controls to feel unresponsive.
+        currentMovementDirection = GetMovementDirection();
+    }
+
+    Vector2 GetMovementDirection() {
+
+        //Initial direction is zero ([0,0])
+        Vector2 direction = Vector2.zero;
+
+        //Set direction according to arrow keys
+        if (Input.GetKey(MoveUp))
+            direction =Vector2.up;
+        else if (Input.GetKey(MoveDown))
+            direction = -Vector2.up;
+        else if (Input.GetKey(MoveLeft))
+            direction = -Vector2.right;
+        else if (Input.GetKey(MoveRight))
+            direction = Vector2.right;
+
+        return direction != Vector2.zero ? direction : currentMovementDirection;
     }
 }
