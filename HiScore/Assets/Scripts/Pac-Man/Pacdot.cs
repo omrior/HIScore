@@ -2,12 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pacdot : MonoBehaviour
+public class pacdot : MonoBehaviour
 {
-    void onTriggerEnter2D(Collider2D co) {
-    	if(co.name == "Hero") {
-    		Destroy(gameObject);
-    	}
+
+    void OnTriggerEnter2D(Collider2D co)
+    {
+        
+        if (co.name == "player_0")
+        {
+            gameObject.SetActive(false);
+        }
+       
+
     }
-    
 }
