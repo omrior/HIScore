@@ -51,7 +51,6 @@ public class ZombieMovement : MonoBehaviour
         if (hit2D.collider != null)
         {
 
-            print(hit2D.collider.gameObject.name);
             // check if wall ahead
             if (hit2D.collider.gameObject.name
                 == "Map1")
