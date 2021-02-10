@@ -7,9 +7,10 @@ public class pacdot : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D co)
     {
-        
-        if (co.name == "player_0")
+        print(co.name);
+        if (co.name == "Hero")
         {
+            print("lol");
             gameObject.SetActive(false);
         }
        
