@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pacdot : MonoBehaviour
+public class pacdot : MonoBehaviour
 {
 
     void OnTriggerEnter2D(Collider2D co)
@@ -10,7 +10,6 @@ public class Pacdot : MonoBehaviour
         print(co.name);
         if (co.name == "Hero")
         {
-        	Score.scoreValue += 10;
             print("lol");
             gameObject.SetActive(false);
         }
