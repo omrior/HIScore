@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
     public float MovementSpeed = 0.4f;
+    public int Lives = 3;
 
     [Header("Inputs")]
     public KeyCode MoveLeft;
@@ -29,6 +30,21 @@ public class PlayerController : MonoBehaviour {
         // We check this in update because update runs every frame, 
         // polling input inside FixedUpdate can cause controls to feel unresponsive.
         currentMovementDirection = GetMovementDirection();
+    }
+
+    void OnTriggerEnter2D(Collider2D co) {
+    	if(co.name == "Ghost") {
+    		print(co);
+    		if(Lives == 1) {
+    			print("Game Over");
+    			Lives = 3;
+                Application.LoadLevel(Application.loadedLevel);
+    		}
+    		else{
+    			Lives--;
+    			print("Lives: " + Lives);
+    		}
+    	}
     }
 
     Vector2 GetMovementDirection() {

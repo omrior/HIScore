@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ZombieMovement : MonoBehaviour
 {
-    
+    public bool isGhost = true;
     Rigidbody2D rb;
 
     // movement speed
