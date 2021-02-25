@@ -10,6 +10,16 @@ public class changeScenes : MonoBehaviour
         SceneManager.LoadScene(NextScene);
     }
 
+    //previous scene
+    public void retryLevel()
+    {
+       
+        int previousLevel = PlayerPrefs.GetInt("previousLevel");
+        Application.LoadLevel(previousLevel);
+ 
+    }
+
+    //exit
     public void exit() 
     {
      Application.Quit();

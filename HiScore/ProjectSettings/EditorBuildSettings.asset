@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Pac-Man/pacman1.unity
     guid: f2a625405ff4043a28a5b3049891ba69
+  - enabled: 1
+    path: Assets/Scenes/SceneTransitions/GameOver.unity
+    guid: 5a67821b7b764d84ca06bd1298f8b6fa
   m_configObjects: {}
