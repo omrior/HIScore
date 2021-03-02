@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
     public float MovementSpeed = 0.4f;
-    public int Lives = 3;
+    //public int Lives = 3;
 
     [Header("Inputs")]
     public KeyCode MoveLeft;
@@ -35,14 +35,16 @@ public class PlayerController : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D co) {
     	if(co.name == "Ghost") {
     		print(co);
-    		if(Lives == 1) {
+    		if(LivesScript.livesLeft == 1) {
     			print("Game Over");
-    			Lives = 3;
+    			LivesScript.livesLeft = 3;
+                ScoringScript.scoreValue = 0;
                 Application.LoadLevel(Application.loadedLevel);
     		}
     		else{
-    			Lives--;
-    			print("Lives: " + Lives);
+    			LivesScript.livesLeft--;
+                //Application.LoadLevel(Application.loadedLevel);
+    			print("Lives: " + LivesScript.livesLeft);
     		}
     	}
     }
