@@ -10043,7 +10043,7 @@ MonoBehaviour:
   isGhost: 1
   speed: 50
   currentDir: {x: 0, y: 0}
-  rayDistance: 2
+  rayDistance: 4
   rayLayer:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -10086,7 +10086,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1562689299
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e6344cea0b9b27f4bbc17ce0977355a2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -29487,16 +29487,6 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 67.68766
       objectReference: {fileID: 0}
-    - target: {fileID: 7709019260565561133, guid: f094bf556dd0943e395702bfd10afe0e,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: 82.64239
-      objectReference: {fileID: 0}
-    - target: {fileID: 7709019260565561133, guid: f094bf556dd0943e395702bfd10afe0e,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 15.215225
-      objectReference: {fileID: 0}
     - target: {fileID: 7709019260565561143, guid: f094bf556dd0943e395702bfd10afe0e,
         type: 3}
       propertyPath: m_Offset.x
@@ -41704,7 +41694,7 @@ MonoBehaviour:
   isGhost: 1
   speed: 50
   currentDir: {x: 0, y: 0}
-  rayDistance: 2
+  rayDistance: 4
   rayLayer:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -41747,7 +41737,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1562689299
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e6344cea0b9b27f4bbc17ce0977355a2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -42469,7 +42459,7 @@ MonoBehaviour:
   isGhost: 1
   speed: 50
   currentDir: {x: 0, y: 0}
-  rayDistance: 2
+  rayDistance: 4
   rayLayer:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -42512,7 +42502,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1562689299
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e6344cea0b9b27f4bbc17ce0977355a2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -63968,7 +63958,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8.26, y: 13.36}
+  m_Size: {x: 8.26, y: 15}
   m_EdgeRadius: 0
 --- !u!50 &2133371329
 Rigidbody2D:
