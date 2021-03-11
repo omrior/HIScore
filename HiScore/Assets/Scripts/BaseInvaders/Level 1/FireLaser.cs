@@ -6,7 +6,7 @@ public class FireLaser : MonoBehaviour
 {
     //Laser prefab to be fired
     public Transform laserPrefab;
-    public float firingRate = 0.25f;
+    public float firingRate = 0.15f;
     private float laserCooldown;
     
     void Start()
