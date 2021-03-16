@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SceneTransitions/GameOver.unity
     guid: 5a67821b7b764d84ca06bd1298f8b6fa
+  - enabled: 1
+    path: Assets/Scenes/Base Invaders/InvadersLI.unity
+    guid: 918213ccdcd219c439acfc8203a79bd7
   m_configObjects: {}

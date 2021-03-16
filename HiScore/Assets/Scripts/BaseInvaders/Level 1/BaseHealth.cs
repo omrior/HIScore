@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BaseHealth : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class BaseHealth : MonoBehaviour
             if (baseHP <= 0) {
                 //Go to game over scene
                 Destroy(gameObject);    //Erase later, for testing purposes only
+                SceneManager.LoadScene(sceneName:"GameOver");
             }
             //Destroy the zombie
             Destroy(isZombie.gameObject);

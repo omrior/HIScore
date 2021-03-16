@@ -11,6 +11,7 @@ public class Pacdot : MonoBehaviour
         //print(co.name);
         if (co.name == "Hero")
         {
+        	PlayerController.dots -= 1;
             gameObject.SetActive(false);
         }
        

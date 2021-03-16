@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
     public float MovementSpeed = 0.4f;
-    //public int Lives = 3;
+    public static int dots = 513;
 
     [Header("Inputs")]
     public KeyCode MoveLeft;
@@ -30,6 +31,10 @@ public class PlayerController : MonoBehaviour {
         // We check this in update because update runs every frame, 
         // polling input inside FixedUpdate can cause controls to feel unresponsive.
         currentMovementDirection = GetMovementDirection();
+        if(dots < 480) {
+            print("Dots: " + dots);
+            SceneManager.LoadScene(sceneName: "InvadersLI");
+        }
     }
 
     void OnTriggerEnter2D(Collider2D co) {
@@ -39,14 +44,22 @@ public class PlayerController : MonoBehaviour {
     			print("Game Over");
     			LivesScript.livesLeft = 3;
                 ScoringScript.scoreValue = 0;
-                Application.LoadLevel(Application.loadedLevel);
+                SceneManager.LoadScene(sceneName: "GameOver");
+                //Application.LoadLevel(Application.loadedLevel);
     		}
     		else{
     			LivesScript.livesLeft--;
-                //Application.LoadLevel(Application.loadedLevel);
     			print("Lives: " + LivesScript.livesLeft);
     		}
+        //513
     	}
+        /*if(co.name == "pacdot") {
+            print("Dots: " + dots);
+            dots--;
+            if(dots < 480) {
+                SceneManager.LoadScene(sceneName: "InvadersLI");
+            }
+        }*/
     }
 
     Vector2 GetMovementDirection() {
