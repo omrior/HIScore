@@ -10,7 +10,7 @@ public class ZombieScript : MonoBehaviour
 
     public Rigidbody2D zombie;  //Reference to itself
     public float speed = 15.0f; //Movement speed
-    public int hp = 1;      //Zombie health
+    public int hp = 1;          //Zombie health
     public int damage = 1;      //Damage the zombie does to the base
 
     // Start is called before the first frame update
@@ -40,6 +40,7 @@ public class ZombieScript : MonoBehaviour
             hp -= 1;
             if (hp <= 0) {
                 Destroy(gameObject);
+                ScoreScript.score_val += 10;
             }
             //Destroy the laser shot
             Destroy(isLaser.gameObject);
