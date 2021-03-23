@@ -33,13 +33,12 @@ public class PlayerController : MonoBehaviour {
         currentMovementDirection = GetMovementDirection();
         if(dots < 480) {
             print("Dots: " + dots);
-            SceneManager.LoadScene(sceneName: "InvadersLI");
+            //SceneManager.LoadScene(sceneName: "InvadersLI");
         }
     }
 
     void OnTriggerEnter2D(Collider2D co) {
     	if(co.name == "Ghost") {
-    		print(co);
     		if(LivesScript.livesLeft == 1) {
     			print("Game Over");
     			LivesScript.livesLeft = 3;
@@ -53,13 +52,10 @@ public class PlayerController : MonoBehaviour {
     		}
         //513
     	}
-        /*if(co.name == "pacdot") {
-            print("Dots: " + dots);
-            dots--;
-            if(dots < 480) {
-                SceneManager.LoadScene(sceneName: "InvadersLI");
-            }
-        }*/
+        print(co.name);
+        if(co.name == "Key" || co.name == "Key1") {
+            SceneManager.LoadScene(sceneName: "InvadersLI");
+        }
     }
 
     Vector2 GetMovementDirection() {

@@ -5,10 +5,17 @@ using UnityEngine;
 public class map : MonoBehaviour
 {
     public GameObject[] gameObjects;
-    
+    public GameObject[] keys;
+
     void Awake()
     {
        gameObjects = GameObject.FindGameObjectsWithTag("pacdot");
+       keys = GameObject.FindGameObjectsWithTag("key");
+       foreach (GameObject key in keys)
+       {
+            key.SetActive(true);
+       }
+        
     }
     
     // Update is called once per frame
@@ -36,6 +43,11 @@ public class map : MonoBehaviour
             foreach (GameObject go in gameObjects)
             {
                 go.SetActive(true);
+            }
+
+            foreach (GameObject key in keys)
+            {
+                key.SetActive(true);
             }
         }
         
