@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour {
         // polling input inside FixedUpdate can cause controls to feel unresponsive.
         currentMovementDirection = GetMovementDirection();
         if(dots < 480) {
-            print("Dots: " + dots);
+            //print("Dots: " + dots);
             //SceneManager.LoadScene(sceneName: "InvadersLI");
         }
     }
@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour {
     		}
         //513
     	}
-        print(co.name);
+        //print(co.name);
         if(co.name == "Key" || co.name == "Key1") {
             SceneManager.LoadScene(sceneName: "InvadersLI");
         }
