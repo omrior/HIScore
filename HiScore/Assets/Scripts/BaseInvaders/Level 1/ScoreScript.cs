@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class ScoreScript : MonoBehaviour
 {
@@ -20,8 +19,5 @@ public class ScoreScript : MonoBehaviour
     {
         score.text = "Score: " + score_val;
         print(score_val);
-        if(score_val >= 100) {
-            SceneManager.LoadScene(sceneName: "InvadersLII");
-        }
     }
 }
