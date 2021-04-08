@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Base Invaders/InvadersLI.unity
     guid: 918213ccdcd219c439acfc8203a79bd7
+  - enabled: 1
+    path: Assets/Scenes/Base Invaders/InvadersLII.unity
+    guid: 883c9d51c725b3f44a2e9f68e4d4948a
+  - enabled: 1
+    path: Assets/Scenes/Base Invaders/InvadersLIII.unity
+    guid: 397ef499e89561d43a27ada5bb07d80c
   m_configObjects: {}
