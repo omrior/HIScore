@@ -29657,12 +29657,6 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7709019260565561115, guid: f094bf556dd0943e395702bfd10afe0e,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: b234a03024143419fb6d5a8f188c66dd,
-        type: 3}
     - target: {fileID: 7709019260565561116, guid: f094bf556dd0943e395702bfd10afe0e,
         type: 3}
       propertyPath: m_Enabled
