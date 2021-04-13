@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour {
         // Get the users input and set the movement direction. 
         // We check this in update because update runs every frame, 
         // polling input inside FixedUpdate can cause controls to feel unresponsive.
+        
         currentMovementDirection = GetMovementDirection();
         if(dots < 480) {
             //print("Dots: " + dots);
