@@ -5,14 +5,14 @@ using UnityEngine;
 /**
  * Controls the Zombie Enemy for the Space Invaders level
  */ 
-public class ZombieScript : MonoBehaviour
+public class ZombieScript3 : MonoBehaviour
 {
 
     public Rigidbody2D zombie;  //Reference to itself
     public float speed = 15.0f; //Movement speed
     public int hp = 1;          //Zombie health
     public int damage = 1;      //Damage the zombie does to the base
-    public static int score = 0;    //Space invaders score
+    public static int score = 0;
 
     // Start is called before the first frame update
     void Start()

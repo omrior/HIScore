@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class ScoreScript : MonoBehaviour
+public class ScoreScript2 : MonoBehaviour
 {
     Text score;
 
@@ -17,10 +17,10 @@ public class ScoreScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        score.text = "Score: " + ZombieScript.score;
-        print(ZombieScript.score);
-        if(ZombieScript.score >= 1000) {
-            SceneManager.LoadScene(sceneName: "InvadersLII");
+        score.text = "Score: " + ZombieScript2.score;
+        print(ZombieScript2.score);
+        if(ZombieScript2.score >= 1500) {
+            SceneManager.LoadScene(sceneName: "InvadersLIII");
         }
     }
 }

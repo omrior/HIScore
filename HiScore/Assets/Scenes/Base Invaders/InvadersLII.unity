@@ -268,6 +268,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8423833028199769238, guid: 54e03d3268ae669479c917db307f5678,
+        type: 3}
+      propertyPath: zombie
+      value: 
+      objectReference: {fileID: 9075640101567158863, guid: 9c558c59f6e4a4745a90a6ef72f5a40c,
+        type: 3}
     - target: {fileID: 8423833028199769239, guid: 54e03d3268ae669479c917db307f5678,
         type: 3}
       propertyPath: m_Name
@@ -549,7 +555,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1291023044}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e198700d265c47c4ead858651e4fbe09, type: 3}
+  m_Script: {fileID: 11500000, guid: 685e9825fa92d408ead2f87e8b66063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1291023047
@@ -876,7 +882,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2028472776}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e198700d265c47c4ead858651e4fbe09, type: 3}
+  m_Script: {fileID: 11500000, guid: 956af6d4f949d41a58eb99b397885ac2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &2028472779

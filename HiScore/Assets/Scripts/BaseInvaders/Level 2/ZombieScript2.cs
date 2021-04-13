@@ -5,19 +5,19 @@ using UnityEngine;
 /**
  * Controls the Zombie Enemy for the Space Invaders level
  */ 
-public class ZombieScript : MonoBehaviour
+public class ZombieScript2 : MonoBehaviour
 {
 
-    public Rigidbody2D zombie;  //Reference to itself
+    public Rigidbody2D zombie2;  //Reference to itself
     public float speed = 15.0f; //Movement speed
     public int hp = 1;          //Zombie health
     public int damage = 1;      //Damage the zombie does to the base
-    public static int score = 0;    //Space invaders score
+    public static int score = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        zombie = this.gameObject.GetComponent<Rigidbody2D>();
+        zombie2 = this.gameObject.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -28,7 +28,7 @@ public class ZombieScript : MonoBehaviour
     
     public void moveZombie()
     {
-        zombie.velocity = new Vector2 (-1, 0) * speed;
+        zombie2.velocity = new Vector2 (-1, 0) * speed;
     }
 
     //If a zombie is hit by a laser, the zombie loses hp. 
