@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class BaseHealth : MonoBehaviour
 {
     public static int baseHP = 10;
-        
+
     //If a zombie reaches the base, base loses hp
     //If base hp reaches 0, go to Game Over scene
     void OnTriggerEnter2D(Collider2D isZombie)

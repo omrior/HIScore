@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class ScoreScript : MonoBehaviour
 {
     Text score;
+    public int minScore = 500;
+    public string nextLevel;
 
     // Start is called before the first frame update
     void Start()
@@ -19,8 +21,8 @@ public class ScoreScript : MonoBehaviour
     {
         score.text = "Score: " + ZombieScript.score;
         print(ZombieScript.score);
-        if(ZombieScript.score >= 1000) {
-            SceneManager.LoadScene(sceneName: "InvadersLII");
+        if(ZombieScript.score >= minScore) {
+            SceneManager.LoadScene(sceneName: nextLevel);
         }
     }
 }
