@@ -30,7 +30,6 @@ public class PlayerController : MonoBehaviour {
         // Get the users input and set the movement direction. 
         // We check this in update because update runs every frame, 
         // polling input inside FixedUpdate can cause controls to feel unresponsive.
-        
         currentMovementDirection = GetMovementDirection();
         if(dots < 480) {
             //print("Dots: " + dots);
@@ -53,9 +52,15 @@ public class PlayerController : MonoBehaviour {
     		}
         //513
     	}
-        //print(co.name);
+      
         if(co.name == "Key" || co.name == "Key1") {
-            SceneManager.LoadScene(sceneName: "InvadersLI");
+            Scene scene = SceneManager.GetActiveScene();
+            if (scene.name == "pacman1")
+                SceneManager.LoadScene(sceneName: "pacman2");
+            else if (scene.name == "pacman2")
+                SceneManager.LoadScene(sceneName: "pacman3");
+            else if (scene.name == "pacman3")
+                SceneManager.LoadScene(sceneName: "InvadersLI");
         }
     }
 

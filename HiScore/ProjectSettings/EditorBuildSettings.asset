@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Base Invaders/InvadersLIII.unity
     guid: 397ef499e89561d43a27ada5bb07d80c
+  - enabled: 1
+    path: Assets/Scenes/Pac-Man/pacman2.unity
+    guid: cad26f4b812a727409f94f7c34764f4c
+  - enabled: 1
+    path: Assets/Scenes/Pac-Man/pacman3.unity
+    guid: 728e0a499e3b58d4f8fd4b4b7046ae55
   m_configObjects: {}

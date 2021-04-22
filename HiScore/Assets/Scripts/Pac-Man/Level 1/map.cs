@@ -13,7 +13,7 @@ public class map : MonoBehaviour
        keys = GameObject.FindGameObjectsWithTag("key");
        foreach (GameObject key in keys)
        {
-            key.SetActive(false);
+            key.SetActive(true);
        }
         
     }
