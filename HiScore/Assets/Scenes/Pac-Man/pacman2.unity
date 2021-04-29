@@ -31387,6 +31387,32 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 8.36746, y: 0.62685394}
   m_EdgeRadius: 0
+--- !u!61 &1026800713
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026800658}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 98.120316, y: 10.641561}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 240, y: 135}
+    newSize: {x: 240, y: 135}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.80685425, y: 8.44282}
+  m_EdgeRadius: 0
 --- !u!114 &1026800735
 MonoBehaviour:
   m_ObjectHideFlags: 0
